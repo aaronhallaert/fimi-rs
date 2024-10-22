@@ -1,0 +1,6 @@
+[package]
+name = "fimi_magic"
+
+[lib]
+name = "fimi_magic"
+proc-macro = true

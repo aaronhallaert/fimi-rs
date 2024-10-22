@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "fimi",
+    "fimi_magic",
+    "fimi_example",
+]

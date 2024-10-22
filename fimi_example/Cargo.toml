@@ -1,0 +1,13 @@
+[package]
+name = "fimi_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dirs = "5.0.1"
+fimi = { path = "../fimi" }
+fimi_magic = { path = "../fimi_magic" }
+serde = "1.0.213"
+serde_derive = "1.0.213"
+serde_json = "1.0.132"
+
