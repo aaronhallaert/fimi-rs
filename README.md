@@ -12,7 +12,7 @@ The `fimi` crate delivers the core business logic for this framework, while `fim
 
 ## Usage
 
-The crate tracks executed migration by keeping record in a manifest file.
+The crate tracks executed migrations by keeping record in a manifest file.
 
 ```Rust
 /// see `fimi_example` to explore the complete example
@@ -51,10 +51,19 @@ mod migrations {
 fn main() {
     let executor = migrations::migrations();
 
-    executor.up(vec![]);
+    executor.up();
 }
 ```
 
 ## Roadmap
 
 - [ ] interactive up/down with specified migrations (cargo-fimi?)
+    - needs dynamically loading of the migration modules when executing from cli (e.g. with `cargo fimi`) in the project where the migrations exist 🤔
+- [ ] scaffold migrations
+
+## Similar crates
+
+`fimi-rs` differs in the fact that the migrations are generic and are not tied to SQL / specific database connections.
+
+- [refinery](https://github.com/rust-db/refinery)
+- [dbmigrate](https://github.com/Keats/dbmigrate)
