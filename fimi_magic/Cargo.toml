@@ -1,5 +1,12 @@
 [package]
 name = "fimi_magic"
+version = "0.1.3"
+edition = "2021"
+description = "Procedural macros for fimi-rs (generic file migration framework)"
+license = "MIT OR Apache-2.0"
+keywords = ["file", "migration"]
+repository = "https://github.com/aaronhallaert/fimi-rs"
+readme = "README.md"
 
 [lib]
 name = "fimi_magic"

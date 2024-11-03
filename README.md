@@ -14,7 +14,7 @@ The `fimi` crate delivers the core business logic for this framework, while `fim
 
 The crate tracks executed migrations by keeping record in a manifest file.
 
-```Rust
+```rust
 /// see `fimi_example` to explore the complete example
 
 mod migrations {

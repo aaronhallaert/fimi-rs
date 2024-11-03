@@ -1,7 +1,12 @@
 [package]
 name = "fimi"
-version = "0.1.0"
+version = "0.1.3"
 edition = "2021"
+description = "A generic migration framework"
+license = "MIT OR Apache-2.0"
+keywords = ["file", "migration"]
+repository = "https://github.com/aaronhallaert/fimi-rs"
+readme = "README.md"
 
 [dependencies]
 chrono = {version = "0.4.38", features = ["serde"]}
