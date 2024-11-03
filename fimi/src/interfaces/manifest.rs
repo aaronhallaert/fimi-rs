@@ -20,7 +20,15 @@ struct ManifestIO;
 impl ManifestIOTrait for ManifestIO {
     fn get_manifest_path(&self) -> std::path::PathBuf {
         let mut manifest_path = dirs::data_dir().unwrap_or_default();
-        manifest_path.push(env::var("APPNAME").unwrap_or_else(|_| "fimi".to_string()));
+        let appname = env::current_exe()
+            .ok()
+            .and_then(|path| {
+                path.file_name()
+                    .map(|name| name.to_string_lossy().into_owned())
+            })
+            .unwrap_or_else(|| "fimi".to_string());
+
+        manifest_path.push(appname);
         if !manifest_path.exists() {
             fs::create_dir_all(&manifest_path).expect("Failed to create manifest directories");
         }
