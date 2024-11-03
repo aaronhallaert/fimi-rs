@@ -62,8 +62,8 @@ pub fn migrations(migration_token: TokenStream) -> TokenStream {
 
     return_value += r#"
         pub fn migrations() -> MigrationExecutor { 
-            MigrationExecutor {
-                migrations: vec![
+            MigrationExecutor::new(
+                vec![
     "#;
 
     for mig in &parsed_migrations {
@@ -83,8 +83,8 @@ pub fn migrations(migration_token: TokenStream) -> TokenStream {
     }
 
     return_value += r#"
-        ]
-    }}"#;
+        ],
+        )}"#;
 
     return_value.parse().unwrap()
 }

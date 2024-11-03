@@ -4,11 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-chrono = "0.4.38"
+chrono = {version = "0.4.38", features = ["serde"]}
 dirs = "5.0.1"
 serde = "1.0.211"
 serde_derive = "1.0.211"
 serde_json = "1.0.132"
+mockall = "0.13.0"
+
 
 [lib]
 path = "src/lib.rs"
